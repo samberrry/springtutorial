@@ -19,7 +19,7 @@ default-init-method="init">
     </bean>
     <bean id="spellChecker" class="com.myspring.di.SpellChecker"></bean>
     <bean id="textEditor" class="com.myspring.di.TextEditor">
-        <constructor-arg ref="spellChecker"/>
+        <property name="spellChecker" ref="spellChecker"/>
     </bean>
 
 </beans>
