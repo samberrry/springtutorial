@@ -17,9 +17,10 @@ default-init-method="init">
         <property name="message1" value="Hello India!"/>
         <property name="message3" value="Namaste India!"/>
     </bean>
-    <bean id="spellChecker" class="com.myspring.di.SpellChecker"></bean>
     <bean id="textEditor" class="com.myspring.di.TextEditor">
-        <property name="spellChecker" ref="spellChecker"/>
+        <property name="spellChecker">
+            <bean id="spellChecker" class="com.myspring.di.SpellChecker"/>
+        </property>
     </bean>
 
 </beans>
