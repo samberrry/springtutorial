@@ -5,9 +5,18 @@ package com.myspring.di;
  */
 public class TextEditor {
     private SpellChecker spellChecker;
+    private String name;
     public void setSpellChecker(SpellChecker spellChecker){
         System.out.println("Inside setSpellChecker.");
         this.spellChecker = spellChecker;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public SpellChecker getSpellChecker() {

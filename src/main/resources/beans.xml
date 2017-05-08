@@ -3,42 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 default-init-method="init">
-   <bean id="myCollection" class="com.myspring.collection.MyCollection">
-       <property name="addressList">
-           <list>
-               <value>India</value>
-               <value>Pakistan</value>
-               <value>USA</value>
-               <value>USA</value>
-           </list>
-       </property>
-
-       <property name="addressSet">
-           <set>
-               <value>India</value>
-               <value>Pakistan</value>
-               <value>USA</value>
-               <value>USA</value>
-           </set>
-       </property>
-
-       <property name="addressMap">
-           <map>
-               <entry key="1" value="India"/>
-               <entry key="2" value="Pakistan"/>
-               <entry key="3" value="USA"/>
-               <entry key="4" value="USA"/>
-           </map>
-       </property>
-
-       <property name="addressProp">
-           <props>
-               <prop key="one">India</prop>
-               <prop key="tow">Pakistan</prop>
-               <prop key="three">USA</prop>
-               <prop key="four">USA</prop>
-           </props>
-       </property>
-   </bean>
-
+    <bean id="textEditor" class="com.myspring.di.TextEditor" autowire="byName">
+        <property name="name" value="Generic Text Editor"/>
+    </bean>
+    <bean id="spellChecker" class="com.myspring.di.SpellChecker"></bean>
 </beans>

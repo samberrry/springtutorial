@@ -13,12 +13,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainApp {
     public static void main(String[] args){
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-
-        MyCollection myCollection = (MyCollection)context.getBean("myCollection");
-        myCollection.getAddressList();
-        myCollection.getAddressSet();
-        myCollection.getAddressMap();
-        myCollection.getAddressProp();
-
+        TextEditor tx = (TextEditor) context.getBean("textEditor");
+        tx.spellCheck();
+        tx.getName();
     }
 }
