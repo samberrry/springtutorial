@@ -3,24 +3,42 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 default-init-method="init">
-    <bean id="helloWorld" class="com.myspring.HelloWorld" init-method="init">
-        <property name="message1" value="Hello World"/>
-        <property name="message2" value="Hello World2"/>
-    </bean>
-    <!--<bean class="com.myspring.InitHelloWorld"/>-->
+   <bean id="myCollection" class="com.myspring.collection.MyCollection">
+       <property name="addressList">
+           <list>
+               <value>India</value>
+               <value>Pakistan</value>
+               <value>USA</value>
+               <value>USA</value>
+           </list>
+       </property>
 
-    <bean id="beanTemplate" abstract="true">
-        <property name="message2" value="Hello World Template"/>
-    </bean>
+       <property name="addressSet">
+           <set>
+               <value>India</value>
+               <value>Pakistan</value>
+               <value>USA</value>
+               <value>USA</value>
+           </set>
+       </property>
 
-    <bean id="helloIndia" class="com.myspring.HelloIndia" parent="beanTemplate">
-        <property name="message1" value="Hello India!"/>
-        <property name="message3" value="Namaste India!"/>
-    </bean>
-    <bean id="textEditor" class="com.myspring.di.TextEditor">
-        <property name="spellChecker">
-            <bean id="spellChecker" class="com.myspring.di.SpellChecker"/>
-        </property>
-    </bean>
+       <property name="addressMap">
+           <map>
+               <entry key="1" value="India"/>
+               <entry key="2" value="Pakistan"/>
+               <entry key="3" value="USA"/>
+               <entry key="4" value="USA"/>
+           </map>
+       </property>
+
+       <property name="addressProp">
+           <props>
+               <prop key="one">India</prop>
+               <prop key="tow">Pakistan</prop>
+               <prop key="three">USA</prop>
+               <prop key="four">USA</prop>
+           </props>
+       </property>
+   </bean>
 
 </beans>
