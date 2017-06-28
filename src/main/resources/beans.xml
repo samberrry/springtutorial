@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-default-init-method="init">
-    <bean id="textEditor" class="com.myspring.di.TextEditor" autowire="byName">
-        <property name="name" value="Generic Text Editor"/>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       default-init-method="init">
+
+    <context:annotation-config/>
+
+    <bean id="student" class="com.myspring.annotation.Student">
+        <property name="age" value="23"/>
+        <property name="name" value="hessam"/>
     </bean>
-    <bean id="spellChecker" class="com.myspring.di.SpellChecker"></bean>
+
 </beans>
