@@ -2,6 +2,7 @@ package com.myspring.main;
 
 import com.myspring.HelloIndia;
 import com.myspring.HelloWorld;
+import com.myspring.annotation.Profile;
 import com.myspring.annotation.Student;
 import com.myspring.collection.MyCollection;
 import com.myspring.di.TextEditor;
@@ -14,8 +15,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainApp {
     public static void main(String[] args){
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-        TextEditor textEditor = (TextEditor)context.getBean("textEditor");
-        textEditor.spellCheck();
+
+
 
     }
 }

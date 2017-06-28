@@ -7,10 +7,6 @@
 
     <context:annotation-config/>
 
-    <bean id="textEditor" class="com.myspring.di.TextEditor">
-    </bean>
 
-    <bean id="spellChecker" class="com.myspring.di.SpellChecker">
-    </bean>
 
 </beans>
