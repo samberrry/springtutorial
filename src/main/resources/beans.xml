@@ -7,9 +7,10 @@
 
     <context:annotation-config/>
 
-    <bean id="student" class="com.myspring.annotation.Student">
-        <property name="age" value="23"/>
-        <property name="name" value="hessam"/>
+    <bean id="textEditor" class="com.myspring.di.TextEditor">
+    </bean>
+
+    <bean id="spellChecker" class="com.myspring.di.SpellChecker">
     </bean>
 
 </beans>
