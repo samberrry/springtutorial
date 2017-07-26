@@ -1,5 +1,6 @@
 package com.myspring.annotation;
 
+import com.myspring.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
