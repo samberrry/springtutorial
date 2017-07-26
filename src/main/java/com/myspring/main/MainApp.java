@@ -13,7 +13,6 @@ public class MainApp {
 
         Student student = (Student) context.getBean("student");
 
-        student.setAge(12);
         student.getAge();
         student.getName();
 
